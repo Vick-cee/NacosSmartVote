@@ -1,0 +1,244 @@
+/*const [elections, setElections] = useState(
+    [
+
+        {
+            createdAt : "2025-11-21T14:59:39.970Z",
+            department: "mathematics",
+            
+            image: "",
+            level: "500L",
+            manifesto: "try",
+            name:"james gunn1",
+            position: "governor",
+            updatedAt: "2025-11-29T22:06:04.935Z",
+            _id:"69207e5b71b7555679fedb2e",
+
+
+            electionId : [
+                {
+                    candidates: [ "69207e5b71b7555679fedb2e","69281dbffedeadb843d9bbaf","69283e7d4bfebd882ceed88c" ] ,
+                    completed: false,
+                    createdAt: "2025-11-21T14:58:51.853Z",
+                    desc: "governorship election",
+                    end: "2025-11-25T00:00:00.000Z",
+                    name: "nacos_111",
+                    position: "governor",
+                    start: "2025-11-21T00:00:00.000Z",
+                    statue: true,
+                    updatedAt: "2025-11-27T12:05:17.926Z",
+                    _id: "69207e2b71b7555679fedb2b_1111",
+
+                }
+            
+            ],
+
+            votes : ["690d99513a8cc990b6b65e14","6912683de7f6b91f10deaf3e","69238c18d296a2f1b600fd04","692b69cacb17b44947d899b1","692b69cacb17b44947d899b1","692b69cacb17b44947d899b1","692b69cacb17b44947d899b1","692b69cacb17b44947d899b1"]
+        },
+        {
+            createdAt : "2025-11-21T14:59:39.970Z",
+            department: "mathematics",
+            
+            image: "",
+            level: "500L",
+            manifesto: "try",
+            name:"james gunn1",
+            position: "governor",
+            updatedAt: "2025-11-29T22:06:04.935Z",
+            _id:"69207e5b71b7555679fedb2e",
+
+
+            electionId : [
+                {
+                    candidates: [ "69207e5b71b7555679fedb2e","69281dbffedeadb843d9bbaf","69283e7d4bfebd882ceed88c" ] ,
+                    completed: false,
+                    createdAt: "2025-11-21T14:58:51.853Z",
+                    desc: "governorship election",
+                    end: "2025-11-25T00:00:00.000Z",
+                    name: "nacos_111",
+                    position: "governor",
+                    start: "2025-11-21T00:00:00.000Z",
+                    statue: true,
+                    updatedAt: "2025-11-27T12:05:17.926Z",
+                    _id: "69207e2b71b7555679fedb2b_1111",
+
+                }
+            
+            ],
+
+            votes : ["690d99513a8cc990b6b65e14","6912683de7f6b91f10deaf3e","69238c18d296a2f1b600fd04","692b69cacb17b44947d899b1","692b69cacb17b44947d899b1","692b69cacb17b44947d899b1",]
+        },
+        {
+            createdAt : "2025-11-21T14:59:39.970Z",
+            department: "mathematics",
+            
+            image: "",
+            level: "500L",
+            manifesto: "try",
+            name:"james gunn1",
+            position: "governor",
+            updatedAt: "2025-11-29T22:06:04.935Z",
+            _id:"69207e5b71b7555679fedb2e",
+
+
+            electionId : [
+                {
+                    candidates: [ "69207e5b71b7555679fedb2e","69281dbffedeadb843d9bbaf","69283e7d4bfebd882ceed88c" ] ,
+                    completed: false,
+                    createdAt: "2025-11-21T14:58:51.853Z",
+                    desc: "governorship election",
+                    end: "2025-11-25T00:00:00.000Z",
+                    name: "nacos_111",
+                    position: "governor",
+                    start: "2025-11-21T00:00:00.000Z",
+                    statue: true,
+                    updatedAt: "2025-11-27T12:05:17.926Z",
+                    _id: "69207e2b71b7555679fedb2b_1111",
+
+                }
+            
+            ],
+
+            votes : ["690d99513a8cc990b6b65e14","6912683de7f6b91f10deaf3e","69238c18d296a2f1b600fd04","692b69cacb17b44947d899b1","692b69cacb17b44947d899b1","692b69cacb17b44947d899b1","692b69cacb17b44947d899b1","692b69cacb17b44947d899b1","692b69cacb17b44947d899b1","692b69cacb17b44947d899b1","692b69cacb17b44947d899b1","692b69cacb17b44947d899b1"]
+        },
+        
+        {
+            createdAt : "2025-11-21T14:59:39.970Z",
+            department: "mathematics",
+            
+            image: "",
+            level: "500L",
+            manifesto: "try",
+            name:"gun hun",
+            position: "governor",
+            updatedAt: "2025-11-29T22:06:04.935Z",
+            _id:"69207e5b71b7555679fedb2e",
+
+
+            electionId : [
+                {
+                    candidates: [ "69207e5b71b7555679fedb2e","69281dbffedeadb843d9bbaf","69283e7d4bfebd882ceed88c" ] ,
+                    completed: false,
+                    createdAt: "2025-11-21T14:58:51.853Z",
+                    desc: "governorship election",
+                    end: "2025-11-25T00:00:00.000Z",
+                    name: "nacos_111",
+                    position: "governor",
+                    start: "2025-11-21T00:00:00.000Z",
+                    statue: true,
+                    updatedAt: "2025-11-27T12:05:17.926Z",
+                    _id: "69207e2b71b7555679fedb2b_1111",
+
+                }
+            
+            ],
+
+            votes : ["690d99513a8cc990b6b65e14","6912683de7f6b91f10deaf3e","69238c18d296a2f1b600fd04","692b69cacb17b44947d899b1","692b69cacb17b44947d899b1",]
+        },
+        
+        {
+            createdAt : "2025-11-21T14:59:39.970Z",
+            department: "mathematics",
+            
+            image: "",
+            level: "500L",
+            manifesto: "try",
+            name:"james gunn2",
+            position: "governship",
+            updatedAt: "2025-11-29T22:06:04.935Z",
+            _id:"69207e5b71b7555679fedb2e",
+
+
+            electionId : [
+                {
+                    candidates: [ "69207e5b71b7555679fedb2e","69281dbffedeadb843d9bbaf","69283e7d4bfebd882ceed88c" ] ,
+                    completed: false,
+                    createdAt: "2025-11-21T14:58:51.853Z",
+                    desc: "governorship election",
+                    end: "2025-11-25T00:00:00.000Z",
+                    name: "nacos_111",
+                    position: "governorship",
+                    start: "2025-11-21T00:00:00.000Z",
+                    statue: true,
+                    updatedAt: "2025-11-27T12:05:17.926Z",
+                    _id: "69207e2b71b7555679fedb2b_1111",
+
+                }
+            
+            ],
+
+            votes : ["690d99513a8cc990b6b65e14","6912683de7f6b91f10deaf3e","69238c18d296a2f1b600fd04","692b69cacb17b44947d899b1","692b69cacb17b44947d899b1",]
+        },
+
+
+        // ____________________________________________________
+        {
+            createdAt : "2025-11-21T14:59:39.970Z",
+            department: "mathematics",
+            
+            image: "",
+            level: "400L",
+            manifesto: "try",
+            name:"james gunn2",
+            position: "presidency",
+            updatedAt: "2025-11-29T22:06:04.935Z",
+            _id:"69207e5b71b7555679fedb2e",
+
+
+            electionId : [
+                {
+                    candidates: [ "69207e5b71b7555679fedb2e","69281dbffedeadb843d9bbaf","69283e7d4bfebd882ceed88c" ] ,
+                    completed: false,
+                    createdAt: "2025-11-21T14:58:51.853Z",
+                    desc: "governorship election",
+                    end: "2025-11-25T00:00:00.000Z",
+                    name: "nacos_222",
+                    position: "presidency",
+                    start: "2025-11-21T00:00:00.000Z",
+                    statue: true,
+                    updatedAt: "2025-11-27T12:05:17.926Z",
+                    _id: "69207e2b71b7555679fedb2b_333",
+
+                }
+            
+            ],
+
+            votes : ["690d99513a8cc990b6b65e14","6912683de7f6b91f10deaf3e","69238c18d296a2f1b600fd04","692b69cacb17b44947d899b1","692b69cacb17b44947d899b1",]
+        },
+
+        // _________________________________________
+        {
+            createdAt : "2025-11-21T14:59:39.970Z",
+            department: "mathematics",
+            
+            image: "",
+            level: "200L",
+            manifesto: "try",
+            name:"james gunn3",
+            position: "presidency",
+            updatedAt: "2025-11-29T22:06:04.935Z",
+            _id:"69207e5b71b7555679fedb2e",
+
+
+            electionId : [
+                {
+                    candidates: [ "69207e5b71b7555679fedb2e","69281dbffedeadb843d9bbaf","69283e7d4bfebd882ceed88c" ] ,
+                    completed: false,
+                    createdAt: "2025-11-21T14:58:51.853Z",
+                    desc: "governorship election",
+                    end: "2025-11-25T00:00:00.000Z",
+                    name: "nacos_333",
+                    position: "governor",
+                    start: "2025-11-21T00:00:00.000Z",
+                    statue: true,
+                    updatedAt: "2025-11-27T12:05:17.926Z",
+                    _id: "69207e2b71b7555679fedb2b_333",
+
+                }
+            
+            ],
+
+            votes : ["690d99513a8cc990b6b65e14","6912683de7f6b91f10deaf3e","69238c18d296a2f1b600fd04","692b69cacb17b44947d899b1","692b69cacb17b44947d899b1",]
+        },
+
+    ])*/
+    

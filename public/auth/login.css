@@ -1,0 +1,319 @@
+.light{
+    --bgc: rgb(241, 236, 236);
+    --color:rgb(18, 18, 18);
+    --secondaryBgc:rgb(255, 255, 255);
+    --whitegrey:rgb(204, 210, 204);
+    --whiteSmoke:rgb(240, 236, 236);
+    --purple: #008400;
+    --dropBgc:rgb(250, 248, 248);
+    --dropColor:rgb(0, 0, 0);
+    --dropShadow:rgb(204, 210, 204);
+    --input:rgb(255, 254, 254);
+    --loginCon:rgba(158, 151, 151, 0.562);
+    --loginConshd:rgb(122, 116, 116);
+    --adminBtn:white;
+}
+
+.dark{
+    --bgc: rgb(20, 20, 20);
+    --color:rgb(225, 218, 218);
+    --secondaryBgc:rgb(16, 16, 16);
+    --whitegrey:rgb(45, 43, 43);
+    --whiteSmoke:rgb(38, 37, 37);
+    --purple: #008400;
+    --dropBgc:rgb(12, 12, 12);
+    --dropColor:grey;
+    --dropShadow:'';
+    --input:black;
+    --loginCon:rgba(79, 76, 76, 0.852);
+    --loginConshd:rgb(13, 13, 13);
+    --adminBtn:rgb(0, 0, 0);
+
+
+
+}
+
+.body2{
+    width: 100%;
+    height: 90vh;
+    background-color: var(--bgc);
+    place-content: center;
+    place-items: center;
+    
+}
+
+.body1{
+    position: relative;
+}
+
+.btnCon{
+    position: fixed;
+    top: 6%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.btnCon button{
+    padding: .5rem 2rem;
+    border: none;
+    background-color: var(--dropBgc);
+    cursor: pointer;
+    color: var(--purple);
+    background-color: transparent;
+    font-size: 20px;
+}
+
+
+#header{
+    font-size: 35px;
+    color: black;
+}
+
+#loginCon{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--loginCon);
+    border: solid 2px var(--whiteSmoke);
+    position: fixed;
+    padding:2rem 2rem;
+    left: 30%;
+    right: 30%;
+    top: 15%;
+    bottom: 5%;
+    overflow: hidden;
+   
+    
+    border-radius: 10px;
+}
+
+
+
+.loginCon2{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 98%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: .5rem;
+   
+}
+
+
+
+.loginCon2::-webkit-scrollbar{
+    background-color: transparent;
+    width: 3px;
+}
+
+.loginCon2::-webkit-scrollbar-thumb{
+    background-color: var(--purple);
+    width: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+@media (max-width:799px) {
+    #loginCon{
+        left: 1%;
+        right: 1%;
+        padding: 1rem;
+        background-color: unset;
+        box-shadow: unset;
+        border: 0;
+    }
+
+    .loginCon2{
+        padding: 0;
+    }
+
+    .loginCon2::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+label{
+    font-weight: 500;
+    
+}
+
+#inputs{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 1rem;
+
+}
+
+#inputs #err, #chk{
+    bottom: -30px;
+}
+
+
+.body1 input{
+    padding: 1rem 9rem 1rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--input);
+    box-shadow: 0px 0px 4px var(--loginConshd);
+    color: var(--color);
+    position: relative;
+    outline: none;
+}
+
+.body1 .course{
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--input);
+    box-shadow: 0px 0px 4px var(--dropShadow);
+
+    outline: none;
+}
+
+#course{
+    background-color: var(--input);
+}
+
+select{
+    cursor: pointer;
+
+}
+
+option{
+    color: #555;
+    background-color: var(--input);
+}
+
+#adminBtn{
+    /* color: #9c097c;
+    background-color:var(--adminBtn);
+    box-shadow: 0px 0px 3px var(--dropShadow);
+    width: fit-content;
+    padding: .5rem 1rem;
+    border-radius: 5px; */
+    color: #555;
+}
+
+.body1 button{
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--purple);
+    color: var(--input);
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0px 0px 4px rgb(30, 29, 29);
+}
+
+.errTxt{
+    z-index: 100;
+    position: fixed;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 20%;
+}
+
+@media (max-width:799px) {
+    .errTxt{
+        top: 15%;
+    }
+}
+
+#loadAni{
+    animation-name: loader;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    transition: 1.5s ease;
+    z-index: 100;
+}
+
+@keyframes loader {
+    from{
+        transform: rotate(0deg);
+        color: #555;
+    }
+
+    to{
+        transform: rotate(-360deg);
+        color: var(--purple);
+    }
+}
+
+
+
+.statueCon{
+    background-color: var(--input);
+    box-shadow: 0px 0px 4px var(--loginConshd);
+    padding: 5rem 1rem;
+    border-radius: 10px;
+    place-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#pendingIcon{
+    background-color: var(--bgc);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    place-self: center;
+    align-content: center;
+    font-size: 50px;
+    color: goldenrod;
+}
+
+
+.sttx{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+    color: var(--color);
+    place-content: center;
+}
+
+.sttx #statue{
+    font-size: 15px;
+    background-color: rgb(134, 134, 11);
+    color: yellow;
+}
+
+
+
+.statueCon p{
+    font-size: 14px;
+    margin-top: 3rem;
+}
+
+@media (max-width:799px) {
+
+    .loginCon{
+        display: flex;
+    }
+    body{
+        overflow: hidden;
+    }
+    .body1 input{
+        padding: 1rem 5rem 1rem 1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--dropBgc);
+        box-shadow: 0px 0px 4px var(--dropShadow);
+
+        outline: none;
+    }
+
+    
+}
+
+.body2{
+    background-color: transparent;
+}

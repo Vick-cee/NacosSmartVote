@@ -1,0 +1,261 @@
+.light{
+    --bgc: rgb(241, 236, 236);
+    --color:rgb(18, 18, 18);
+    --secondaryBgc:rgb(255, 255, 255);
+    --secondaryBgc2:rgb(255, 255, 255);
+    --whitegrey:rgb(204, 210, 204);
+    --whitegrey2:rgb(204, 210, 204);
+    --whiteSmoke:rgb(240, 236, 236);
+    --purple: rgb(5, 92, 60);
+    --dropBgc:rgb(250, 248, 248);
+    --dropColor:rgb(0, 0, 0);
+    --dropShadow:rgb(204, 210, 204);
+    --grey: grey;
+}
+
+
+.dark{
+    --bgc: rgb(20, 20, 20);
+    --color:rgb(225, 218, 218);
+    --secondaryBgc:rgb(22, 22, 22);
+    --secondaryBgc2:rgb(0, 0, 0);
+    --whitegrey:rgb(45, 43, 43);
+    --whitegrey2:rgb(25, 23, 23);
+    --whiteSmoke:rgb(38, 37, 37);
+    --purple: rgb(5, 92, 60);
+    --dropBgc:rgb(12, 12, 12);
+    --dropColor:grey;
+    --dropShadow:rgb(18, 19, 18);
+    --grey:rgb(55, 53, 53);
+}
+
+button{
+    cursor:pointer;
+}
+
+
+body{
+    background-color:var(--bgc);
+    color: var(--color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100v;
+}
+
+
+.overflowCon{
+    height: 90vh;
+    overflow-y: scroll;
+}
+
+button{
+    outline: none;
+}
+
+
+
+.headerCon{
+    background-color: var(--secondaryBgc2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 1.5rem .7rem;
+}
+
+#headerText{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--whitegrey);
+    
+}
+
+.headerRight{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    align-items: center;
+    font-size: 18px;
+}
+
+.bell{
+    position: relative;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.bell span{
+    background-color: var(--purple);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 12px;
+    position: absolute;
+    left: 9px;
+    top: -9px;
+    text-align: center;
+    align-content: center;
+    color: white;
+}
+
+
+.dropDown{
+    position: relative;
+    z-index: 10;
+}
+
+
+#dropDown_btn{
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+#dropContent{
+    position: absolute;
+    background-color: var(--dropBgc);
+    color: var(--dropColor);
+    padding: 1rem;
+    left: 50%;
+    right: 50%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px var(--dropShadow);
+    transform: translate(-50%);
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    display: none;
+}
+
+
+
+#dropContent li{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+#dropContent li #icon{
+    font-size: 18px;
+}
+
+
+
+#theme_btn{
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--whitegrey2);
+    font-size: 23px;
+    color: var(--purple);
+    cursor: pointer;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: .3fr 1fr;
+    height: 90vh;
+}
+
+
+.menu{
+    height: 92vh;
+    background-color: var(--secondaryBgc2);
+    display: grid;
+    grid-template-rows: .4fr 1fr 1fr;
+    gap: 3rem;
+}
+
+#storeName{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+#suggHeader{
+    font-size: 21px;
+    place-self: center;
+    
+}
+
+.ul_suggestion{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow-y: scroll;
+    height: 25vh;
+}
+
+
+.ul_suggestion::-webkit-scrollbar{
+    display: none;
+}
+
+.ul_suggestion li{
+    width: fit-content;
+    border-bottom: solid 1px var(--whitegrey);
+}
+
+
+#err{
+    color: red;
+    margin: 5px 0px;
+    position: absolute;
+   
+}
+
+#chk{
+    color: rgb(7, 87, 7);
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 5px 0px;
+    position: absolute;
+    
+    
+}
+
+@media (max-width:799px) {
+    #headerText, #headerText2{
+        font-size: 18px;
+    }
+    .main{
+        display: grid;
+        grid-template-columns:1fr;
+        height: 90vh;
+        
+    }
+    .menu{
+        background-color: var(--secondaryBgc);
+        position: fixed;
+        width: 250px;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        display: none;
+    }
+
+    .body{
+        background-color: var(--bgc);
+    
+    }
+
+
+    
+
+   
+}

@@ -1,0 +1,238 @@
+
+.light{
+    --bg: rgb(241, 236, 236);
+    --color:rgb(18, 18, 18);
+    --secondaryBgc:rgb(255, 255, 255);
+    --secondaryBgc2:rgb(255, 255, 255);
+    --whitegrey:rgb(204, 210, 204);
+    --whiteSmoke:rgb(240, 236, 236);
+    --purple: #008400;
+    --purple2: #008400;
+    --dropBgc:rgba(250, 248, 248, 0.006);
+    --dropBgc2:rgb(250, 248, 248);
+    --dropColor:rgb(0, 0, 0);
+    --dropShadow:rgb(204, 210, 204);
+    --dropShadow2:rgb(204, 210, 204);
+    --promptBgc: rgb(255, 255, 255);
+    --sec_header:white;
+    --mailBgc:white;
+    --sec_header2:white;
+    --search_shdw:rgb(181, 176, 176);
+    --search:white;
+    --shw: rgb(233, 231, 231);
+    --profile:#008400;
+    --white_black:rgb(255, 255, 255);
+    
+}
+
+.dark{
+    --bg:  rgb(15, 18, 18);
+    --color:rgb(225, 218, 218);
+    --secondaryBgc:rgb(16, 16, 16);
+    --secondaryBgc2:rgb(0, 0, 0);
+    --whitegrey:'';
+    --whiteSmoke:rgb(38, 37, 37);
+    --purple:#008400;
+    --purple2:#008400;
+    --dropBgc:rgb(12, 12, 12);
+    --dropBgc2:rgb(0, 0, 0);
+    --dropColor:grey;
+    --dropShadow:rgb(50, 49, 49);
+    --dropShadow2:rgb(11, 11, 11);
+    --promptBgc:rgb(79, 76, 76);
+    --sec_header:rgb(2, 36, 19);
+    --mailBgc:rgb(2, 36, 19);
+    --search_shdw:rgb(46, 45, 45);
+    --search:rgb(0, 0, 0);
+    --shw: rgb(14, 14, 14);
+    --profile: #008400;
+    --white_black:black;
+
+
+
+}
+
+
+
+#poll{
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#electionName{
+    background-color: var(--white_black);
+    padding: 1rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    font-size: 23px;
+}
+
+#canName{
+    text-transform: capitalize;
+}
+
+
+.elTxtCon{
+    position: relative;
+    font-size: 13px;
+    font-weight: 500;
+}
+.elTxtCon #notice{
+    font-size: 15px;
+    font-weight: 500;
+    position: absolute;  
+    background-color: var(--purple);
+    width: 30px;
+    height: 30px;
+    padding: 0 .5rem;
+    top: -40px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+    color: greenyellow;
+    z-index: 2;
+}
+
+
+#notice::after{
+    content: '';
+    position: absolute;
+    background-color: var(--purple);
+    width: 20px;
+    height: 20px;
+    clip-path: polygon(100% 2%, 54% 100%, 0 3%);
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -1;
+}
+
+
+
+
+#canHeader{
+    text-transform: capitalize;
+    background-color: var(--profile);
+    color: white;
+    padding: 1rem;
+}
+.candidateScroll{
+    padding:1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.candidateScroll::-webkit-scrollbar{
+    background-color: transparent;
+    height: 4px;
+    
+}
+
+.candidateScroll::-webkit-scrollbar-thumb{
+    background-color:transparent ;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.candidateScroll .canCard{
+    text-align: center;
+    position: relative;
+}
+
+.overflowCon_el{
+    padding-bottom: 6rem;
+    overflow-x: hidden;
+    height: 57vh;
+    overflow-y: scroll;
+}
+
+.overflowCon_el::-webkit-scrollbar{
+    display: none;
+
+}
+
+
+.canCard #vote{
+    position: absolute;
+    background-color: var(--purple);
+    padding: .1rem .8rem;
+    top: -13px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 10px;
+    color: greenyellow;
+    border: solid 1px greenyellow;
+}
+
+
+.proCon{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    place-content: center;
+    place-items: center;
+    
+}
+
+
+.proCon .con1,.con2{
+    background-color: var(--secondaryBgc2);
+    width: 40%;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    
+}
+
+
+@media (max-width:799px) {
+    .proCon .con1,.con2{
+        background-color: var(--secondaryBgc2);
+        width: 80%;
+        padding: 1rem 1rem;
+        border-radius: 10px;
+    }
+
+}
+
+.con1{
+    place-content: center;
+    place-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.con1 #profileIcon{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+    background-color: var(--bg);
+    font-size: 35px;
+}
+
+
+.con2{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.con2 span{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

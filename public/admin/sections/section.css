@@ -1,0 +1,533 @@
+.light{
+    --bgc: rgb(241, 236, 236);
+    --color:rgb(18, 18, 18);
+    --secondaryBgc:rgb(255, 255, 255);
+    --whitegrey:rgb(204, 210, 204);
+    --whiteSmoke:rgb(240, 236, 236);
+    --purple: #008400;
+    --dropBgc:rgb(250, 248, 248);
+    --dropColor:rgb(0, 0, 0);
+    --dropShadow:rgb(204, 210, 204);
+    --inputCon:rgb(240, 236, 236);
+    --inputBgc:'';
+    --white:black;
+    --errBgc:rgb(189, 181, 181);
+    --input--bgc: rgb(241, 236, 236);
+}
+
+.dark{
+    --bgc: rgb(20, 20, 20);
+    --color:rgb(225, 218, 218);
+    --secondaryBgc:rgb(16, 16, 16);
+    --whitegrey:rgb(45, 43, 43);
+    --whiteSmoke:rgb(38, 37, 37);
+    --purple: #008400;
+    --dropBgc:rgb(12, 12, 12);
+    --dropColor:grey;
+    --dropShadow:rgb(29, 28, 28);
+    --inputCon:rgba(0, 0, 0, 0.263);
+    --inputBgc:rgb(28, 28, 30);
+    --white:white;
+    --errBgc:rgb(36, 35, 35);
+    --input--bgc:rgb(0, 0, 0);
+    
+
+
+
+}
+
+.accessBtn{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+    border: none;
+    position: fixed;
+    bottom: 20%;
+    right: 4%;
+    z-index: 100;
+    background-color: var(--purple);
+    color: white;
+    box-shadow: 0px 0px 3px var(--whitegrey);
+    font-size: 22px;
+}
+
+
+label{
+    color:black;
+    text-transform: capitalize;
+}
+
+.inputContainer{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    gap:2rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 1rem .2rem;
+    
+}
+
+#errM{
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.inputContainer::-webkit-scrollbar{
+    display: none;
+}
+
+.inputContainer div{
+    position: relative;
+}
+
+
+#inputCon{
+    background-color: var(--input--bgc);
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px var(--inputBgc);
+
+}
+
+#inputCon input, select{
+    border: none;
+    background-color: var(--input--bgc);
+    padding: 1rem 6rem 1rem 1rem;
+    width: 90%;
+    color: var(--color);
+    outline-color: var(--purple);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+
+
+#inputCon input::placeholder{
+    color: grey;
+}
+
+select{
+    color: grey;
+    
+}
+
+
+
+.dateCon{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.actCon{
+    display: grid;
+    grid-template-columns: 2.5fr .5fr;
+    gap: 1rem;
+}
+
+.actCon button{
+    border: none;
+    padding: .8rem 0rem;
+    border-radius: 7px;
+    cursor: pointer;
+
+}
+
+#smt{
+    background-color: var(--purple);
+    color: white;
+    box-shadow: 0px 0px 4px rgb(30, 29, 29);
+}
+
+#cnl{
+    background-color: rgb(195, 192, 192);
+    box-shadow: 0px 0px 4px rgb(30, 29, 29);
+}
+
+
+#x{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#promptHeader{
+    font-size: 20px;
+    padding: 1rem 0rem;
+}
+
+img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.elContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:1rem 0rem;
+    padding:.5rem;
+    /* place-content: center; */
+    width: 90%;
+    place-self: center;
+    height: 60vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.elContainer::-webkit-scrollbar{
+    display: none;
+}
+
+.elCon{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: fit-content;
+    border-bottom: solid 1px grey;
+
+}
+
+
+#name{
+    font-size: 25px;
+}
+
+
+
+#statue{
+    padding: .4rem 2rem;
+    background-color: rgb(11, 228, 11);
+    color: rgb(2, 38, 16);
+    border-radius: 10px;
+}
+
+.elDetail{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+}
+
+.details{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+
+.actBtn{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    padding: .5rem 0;
+}
+
+.actBtn button{
+    font-size: 17px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    color: var(--color);
+    cursor: pointer;
+}
+
+
+#loadAni{
+    animation-name: loader;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    transition: 1.5s ease;
+    font-size: 25px;
+    z-index: 120;
+    width: fit-content;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#failedErr{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+#loader, #errMessage{
+    font-size: 140px;
+    place-self: center;
+    margin-top: 10%;
+    display:flex;
+    flex-direction:column;
+    gap: .5rem;
+    text-align: center;
+}
+
+
+@media (max-width:799px) {
+    #loader, #errMessage{
+        font-size: 100px;
+    }
+    
+}
+
+
+
+#errMessage button{
+    padding: .7rem 1rem;
+    border-radius: 5px;
+    background-color: var(--purple);
+    border: none;
+    color: var(--bgc);
+    
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+
+#icon{
+    color: var(--errBgc);
+}
+
+
+#loader{
+    animation-name: loader;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    transition: 1.5s ease;
+}
+
+
+
+
+
+
+/* overview */
+
+.dataOverview{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    place-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 0rem;
+}
+
+.dataCon{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--dropBgc);
+    border-radius: 10px;
+}
+
+.dataType{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-size: 20px;
+}
+
+.dataType span:last-child{
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#dataIcon{
+    font-size: 25px;
+    height: fit-content;
+    padding: .3rem .7rem;
+    border-radius: 5px;
+}
+
+
+
+
+
+@media (max-width: 799px) {
+    .mainGridCon{
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    
+    .mainGrid{
+        width: 1000px;
+    }
+}
+
+
+
+
+
+.gridCol{
+    display: grid;
+    grid-template-columns:.1fr 1fr 1fr 1fr 1fr;
+}
+
+.gridCol span{
+    border: solid 2px rgb(49, 48, 48) ;
+    border-left: 0;
+    padding: 1rem .5rem;
+    font-weight: 600;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+
+
+.profileCon{
+    height: 40vh;
+    overflow-y: scroll;
+    padding-bottom: 5rem;
+
+}
+
+.profileCon::-webkit-scrollbar{
+    display: none;
+}
+
+
+.profile{
+    display: grid;
+    grid-template-columns:.18fr 1fr 1fr 1fr 1fr;
+}
+
+
+.profile #index{
+    font-weight: 600;
+    font-size: 17px;
+    padding: .5rem;
+}
+
+.profile span{
+    border: solid 2px rgb(49, 49, 49) ;
+    border-left: 0;
+    border-bottom: 0;
+    place-content: center;
+    word-wrap: break-word;
+    padding: .5rem;
+    text-transform: capitalize;
+
+
+    
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: flex;
+    display: -webkit-box;
+    -webkit-line-clamp:1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.profile:last-child{
+   border-bottom: solid 2px rgb(46, 45, 45);
+}
+
+
+
+.profile #email{
+    background-color: var(--purple);
+    color: black;
+    text-transform: lowercase;
+}
+
+
+
+.actConbtn{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0rem;
+    border: solid 2px rgb(49, 49, 49) ;
+    border-left: 0;
+    border-bottom: 0;
+}
+
+.actConbtn button{
+    padding: .7rem 0rem;
+}
+
+
+
+#deny{
+    color:var(--purple);
+    background-color: rgb(0, 0, 0);
+    border: none;
+}
+
+#approve{
+    color: rgb(18, 208, 65);
+    background-color: var(--purple);
+    border: none;
+}
+
+
+
+.emptyListCon{
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: capitalize;
+   
+}
+
+#emptyList{
+    font-size: 100px;
+    color: var(--errBgc);
+}
+
+@keyframes loader {
+    from{
+        transform: rotate(0deg);
+        color: #555;
+    }
+
+    to{
+        transform: rotate(-360deg);
+        color: var(--purple);
+    }
+}
+
+
+@media (max-width:799px) {
+
+    .dateCon{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap:2rem;
+    }
+
+    .inputContainer{
+        width:97%;
+        
+    }
+
+    .actCon{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+    }
+}

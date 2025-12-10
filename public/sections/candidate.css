@@ -1,0 +1,685 @@
+.light{
+    --bg: rgb(241, 236, 236);
+    --color:rgb(18, 18, 18);
+    --secondaryBgc:rgb(255, 255, 255);
+    --secondaryBgc2:rgb(255, 255, 255);
+    --whitegrey:rgb(204, 210, 204);
+    --whiteSmoke:rgb(240, 236, 236);
+    --purple: #008400;
+    --purple2: rgb(5, 92, 60);
+    --dropBgc:rgb(250, 248, 248);
+    --dropBgc2:rgb(250, 248, 248);
+    --dropColor:rgb(0, 0, 0);
+    --dropShadow:rgb(204, 210, 204);
+    --dropShadow2:rgb(204, 210, 204);
+    --promptBgc: rgb(255, 255, 255);
+    --sec_header:white;
+    --mailBgc:white;
+    --sec_header2:white;
+    --search_shdw:rgb(181, 176, 176);
+    --search:white;
+    --shw: rgb(233, 231, 231);
+    --profile: #008400;
+    --white_black:rgb(255, 255, 255);
+    
+}
+
+.dark{
+    --bg:  rgb(15, 18, 18);
+    --color:rgb(225, 218, 218);
+    --secondaryBgc:rgb(16, 16, 16);
+    --secondaryBgc2:rgb(0, 0, 0);
+    --whitegrey:'';
+    --whiteSmoke:rgb(38, 37, 37);
+    --purple:rgb(2, 36, 19);
+    --purple2:rgb(2, 36, 19);
+    --dropBgc:rgb(12, 12, 12);
+    --dropBgc2:rgb(0, 0, 0);
+    --dropColor:grey;
+    --dropShadow:rgb(50, 49, 49);
+    --dropShadow2:rgb(11, 11, 11);
+    --promptBgc:rgb(79, 76, 76);
+    --sec_header:rgb(2, 36, 19);
+    --mailBgc:rgb(2, 36, 19);
+    --search_shdw:rgb(46, 45, 45);
+    --search:rgb(0, 0, 0);
+    --shw: rgb(14, 14, 14);
+    --profile: #008400;
+    --white_black:black;
+
+
+
+}
+
+
+.message{
+    background-color: ;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    position: fixed;
+    font-size: 16px;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transition: .5s ease-in-out;
+}
+
+
+.message.active{
+    bottom: 20%;
+    transition: .5s ease-in-out;
+}
+
+
+
+.search{
+    background-color: var(--search);
+    box-shadow: 0px 0px 0px 3px var(--search_shdw);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    padding: .5rem;
+    align-items: center;
+    font-size: 24px;
+}
+
+.search input{
+    border: none;
+    background-color: transparent;
+    padding:.4rem 4rem .4rem .4rem;
+    outline: none;
+    color: var(--color);
+}
+
+
+/* ________________________________________ */
+
+
+#noticeHeader{
+    margin: 4rem .5rem .5rem 1rem;
+}
+.historyCon{
+    padding:1rem .5rem 5rem .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 70vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+    
+}
+
+.historyCon::-webkit-scrollbar{
+    display: none;
+}
+
+
+.mailCon{
+    position: fixed;
+    width: 80%;
+   
+    background-color: var(--secondaryBgc2);
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 0px 0px 10px 3px var(--bg);
+    overflow:scroll;
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0rem 1rem 4rem 1rem;
+}
+
+.mailCon::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+
+.infoCon{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:.5rem 2rem;
+    margin-top: 1rem;
+}
+
+
+
+.statueCon_mail{
+    place-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin-top: 1rem;
+    
+}
+
+.statueCon_mail #check{
+    font-size: 60px;
+    color: green;
+}
+
+
+.mailCon .dataGrid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    background-color: unset;
+    margin-top:1rem;
+}
+
+@media (max-width: 799px) {
+    .mailCon{
+        width: 90%;
+        height:80%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    
+    .infoCon{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap:1rem;
+        margin-top: 1rem;
+        padding:0rem 0.2rem;
+    }
+    .mailCon .dataGrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mailCon .data_con{
+        padding:1rem .2rem;
+    }
+
+}
+
+.data_con{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: flex-start;
+    box-shadow: 0px 3px 10px 0px var(--shw);
+    padding: 1rem 0rem;
+    border-radius: 5px;
+}
+
+#dataText{
+    font-size:20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+#dataValue{
+    font-weight: 600;
+    font-size: 35px;
+    padding-left: .5rem;
+}
+
+.mailCon p{
+    text-align: center;
+    margin-top: 3rem;
+}
+
+
+.historyItem{
+    background-color:var(--white_black);
+    padding:1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    cursor: pointer;
+}
+
+
+.h-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+
+
+
+    
+
+
+.h-flex #dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(53, 232, 25);
+}
+
+
+
+.historyItem #statueText{
+    font-size: 20px;
+    color:var(--color);
+}
+
+/* _________________________________ */
+
+#manu{
+    color: var(--color);
+}
+
+.filterCon{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    overflow-x: scroll;
+    width: 95%;
+    padding:0 1rem;
+
+}
+
+.filterCon::-webkit-scrollbar{
+    display: none;
+}
+
+.filterCon button{
+    padding: .7rem 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--sec_header);
+    color: var(--purple);
+    text-wrap: none;
+}
+
+
+
+
+
+
+#back{
+    color: var(--color);
+    font-size:25px;
+    position: fixed;
+    top: 3%;
+    left: 3%;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.VoteCon{
+    height:70vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    gap: 1rem;
+    padding-bottom: 8rem;
+
+}
+
+.VoteCon::-webkit-scrollbar{
+    display: none;
+}
+
+
+#voteStatue{
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    bottom: 30%;
+    width: fit-content;
+    height: fit-content;
+    padding: .5rem;
+    background-color: transparent;
+    color: var(--color);
+    text-align: center;
+    align-content: center;
+    border-radius: 10px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    
+}
+
+#voteStatue #loader{
+    position: relative;
+    font-size: 30px;
+    color: white;
+}
+
+.positionCon{
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+
+@media (max-width:799px) {
+    .positionCon{
+        gap: 0rem;
+    }
+}
+
+
+#section_header{
+    background-color: var(--sec_header);
+    color: var(--purple);
+    font-weight: 500;
+    font-size: 24px;
+    padding:1rem;
+    text-transform: uppercase;
+}
+
+
+.candidateCon{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 2rem;
+   height: 100%;
+   width: 100%;
+   padding:0rem;
+   
+}
+
+.candidateCon::-webkit-scrollbar{
+    display: none;
+}
+
+
+.rowCon{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 8rem;
+   height: 100%;
+   width: 100%;
+   padding:0rem;
+   margin-bottom: 5rem;
+}
+
+
+
+
+@media (max-width:799px) {
+    .rowCon{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 4rem;
+        place-items: center;
+    }
+}
+
+
+
+
+
+.liCon{
+    display: flex;
+    flex-direction: column;
+    align-self:center;
+    gap: 1rem;
+    font-size: 20px;
+}
+
+#liDits{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 14px;
+}
+
+
+#liDits li{
+    color: var(--color);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+    list-style: disc;
+}
+
+
+@media (max-width:799px) {
+    #liDits{
+       
+        flex-direction: column;
+        gap: .5rem;
+        font-size: 14px;
+    }
+
+    #liDits li{
+        
+        list-style: none;
+    }
+}
+
+.userIcon{
+    display: flex;
+    flex-direction: column;
+    align-self:self-start;
+    gap: 1rem;
+    font-size: 20px;
+}
+
+#userImg{
+    font-size: 120px;
+}
+
+.candidateCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    width: 80%;
+    height: fit-content;
+    padding: 1rem;
+    border-radius: 10px;
+    filter: drop-shadow(0px 0px 8px var(--dropShadow));
+    position: relative;
+    text-transform: capitalize;
+}
+
+
+.candidateCard div{
+    
+    color: black;
+}
+
+
+.details span{
+    color: #555;
+    
+}
+
+
+
+.candidateCard button{
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--whiteSmoke);
+    color: white;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+#actionBtn{
+    position: absolute;
+    bottom: -20%;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+
+#actionBtn button{
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 50%;
+    color: #008400;
+}
+
+header{
+    background-color: var(--dropBgc);
+}
+
+.candidateHeader{
+    padding:2rem 4rem 2rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#htext{
+    font-size: 30px;
+    font-weight: 600;
+    background: var(--profile);
+    padding: 1.7rem .5rem;
+    color: var(--white_black);
+}
+
+#htext2{
+    font-size: 30px;
+}
+
+
+#addCandidate{
+    padding: .7rem 2rem;
+    border: none;
+    background-color: #008400;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 0px 3px var(--dropShadow);
+}
+
+
+.prompt{
+    padding: 2rem;
+    position: fixed;
+    left: 10%;
+    right: 10%;
+    top: 1%;
+    bottom: 10%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    background-color:var(--promptBgc);
+    box-shadow: 0px 0px 3px var(--dropShadow) ;
+}
+
+
+
+
+
+
+.addCan{
+    position: fixed;
+    bottom: 30%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+#voteBtn{
+    position: absolute;
+    bottom: -30%;
+    width: 100%;
+}
+
+#voteBtn button{
+    width:100%;
+    background-color: var(--purple2);
+    color: greenyellow;
+    
+}
+
+
+
+li{
+    list-style: none;
+}
+
+@media (max-width:799px) {
+    .candidateCon{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem 0;
+        place-items: center;
+        width: 100%;
+        padding: 0rem 8rem 5rem 0rem;
+        margin-bottom: 4rem;
+    }
+
+    .candidateCard{
+        padding: 2rem 0rem;
+    }
+
+    header{
+        background-color: var(--dropBgc2);
+        padding:0rem;
+    }
+
+    #htext2{
+        display: none;
+    }
+
+    .candidateHeader{
+        padding:1rem;
+    }
+
+    .userIcon{
+        font-size: 70px;
+    }
+
+    #userImg{
+        font-size: 70px;
+    }
+
+    #htext{
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    #htext2{
+        font-size: 17px;
+    }
+
+    #addCandidate{
+        padding: .7rem 1rem;
+    }
+
+    .details span{
+        font-size: 14px;
+    }
+
+    .prompt{
+        /* background-color: var(--secondaryBgc); */
+        padding: .8rem;
+        position: fixed;
+        left: 0%;
+        right: 0%;
+        top: 1%;
+        bottom: 10%;
+        border-radius: 10px;
+        overflow-y: scroll;
+        padding-bottom: 5rem;
+        padding-top: 2rem;
+    }
+
+    .liCon li{
+        font-size: 13px;
+    }
+}
