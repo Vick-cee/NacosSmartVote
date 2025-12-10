@@ -19,7 +19,7 @@ Backend: Node.js
 
 📦 Setup
 git clone https://github.com/Vick-cee/NacosSmartVote.git
-cd your-repo
+cd NacosSmartVote
 # install dependencies if applicable
 
 📘 Usage
