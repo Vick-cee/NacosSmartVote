@@ -18,7 +18,7 @@ Frontend: HTML/CSS/JS
 Backend: Node.js
 
 📦 Setup
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/Vick-cee/NacosSmartVote.git
 cd your-repo
 # install dependencies if applicable
 
